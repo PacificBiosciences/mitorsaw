@@ -1,4 +1,6 @@
 
+<h1 align="center"><img width="200px" src="images/logo_mitorsaw.svg"/></h1>
+
 <h1 align="center">Mitorsaw</h1>
 
 <p align="center">A tool for mitochondrial analysis for HiFi sequencing data</p>
