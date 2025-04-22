@@ -83,7 +83,7 @@ Other upstream processes may work with Mitorsaw, but there is no official suppor
 
 # Output files
 ## Phased mitochondrial VCF
-The primary output from Mitorsaw is a phased mitochondrial VCF following [VCF v4.5 specifications](https://samtools.github.io/hts-specs/VCFv4.5.pdf).
+The primary output from Mitorsaw is a phased mitochondrial VCF.
 This file includes both homoplasmic and heteroplasmic variation, which can be identified by the genotype (GT) field.
 The VCF file currently includes the following fields for each variant:
 
@@ -153,6 +153,7 @@ Example stats file:
 This option generates a collection of debug files, which are primarily for developers and users interested in deeper discovery on the mitochondria.
 Currently, it includes the following outputs:
 
+* `coverage_stats.json` - JSON file that includes summary coverage statistics relative to the consensus mitochondria and read-level mapping metrics. The file contains four vectors indicating the number of reads at each position with normal coverage, double coverage (i.e., a loop), deleted coverage, and conflicting coverage (multiple but at least one is present and one is deleted).
 * `mito_igv_custom` - This includes an IGV session file and corresponding reference and alignment files to visualize some of the underlying algorithms in Mitorsaw. If loaded into IGV, there will be three reference sequences with mappings:
   * "chrM" is the reference sequence with all haplotype sequences aligned to it.
   * "chrM_consensus" is a looped version of the generated consensus for the dataset. Reads are aligned to this looping structure to more cleanly see reads that span the mitochondria but start mid-way through. Each read is tagged with a haplotype label and fingerprint (e.g., `hap_1_0-1`) for visualization.
