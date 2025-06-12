@@ -1,3 +1,6 @@
+# v0.2.1
+## Fixed
+- Fixed a panic caused by putative deletion at the first reference chrM base
 
 # v0.2.0
 ## Changes
