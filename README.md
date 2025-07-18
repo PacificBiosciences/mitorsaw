@@ -7,7 +7,7 @@
 
 ***
 
-Mitorsaw identify and quantify mitochrondrial variants from [PacBio HiFi](https://www.pacb.com/technology/hifi-sequencing/) datasets.
+Mitorsaw identifies and quantifies mitochondrial variants from [PacBio HiFi](https://www.pacb.com/technology/hifi-sequencing/) datasets.
 Key features include:
 
 * Identification of homoplasmic and heteroplasmic variants for the full length of the mitochondria
