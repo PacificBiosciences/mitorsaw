@@ -1,3 +1,9 @@
+# v0.2.2
+## Fixed
+- Fixed an issue where the tool would panic if the max iterations on consensus was reached instead of returning the last result
+- Fixed an issue where the consensus could "ping-pong" between two answers and not converge
+- Fixed an issue caused by reads that are unexpectedly large (>75 kbp) by filtering them
+
 # v0.2.1
 ## Fixed
 - Fixed a panic caused by putative deletion at the first reference chrM base
