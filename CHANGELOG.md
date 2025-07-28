@@ -1,3 +1,7 @@
+# v0.2.3
+## Fixed
+- Fixed an issue caused by high allele frequency, large deletion variants
+
 # v0.2.2
 ## Fixed
 - Fixed an issue where the tool would panic if the max iterations on consensus was reached instead of returning the last result
