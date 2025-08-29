@@ -1,3 +1,10 @@
+# v0.2.4
+## Changes
+- Added an option to manually set the sample name in the output VCF: `--sample-name`
+
+## Fixed
+- Fixed the VCF sample name to report the BAM read group SM value
+
 # v0.2.3
 ## Fixed
 - Fixed an issue caused by high allele frequency, large deletion variants
