@@ -1,3 +1,7 @@
+# v0.2.5
+## Fixed
+- Fixed an issue where overlapping deletions would lead to elevated partial fingerprinting in the debug outputs
+
 # v0.2.4
 ## Changes
 - Added an option to manually set the sample name in the output VCF: `--sample-name`
