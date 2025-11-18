@@ -1,3 +1,8 @@
+# v0.2.6
+## Fixed
+- Fixed an issue where overlapping variants were not properly marked as incompatible, generating nonsense consensus sequences
+- Fixed an issue where a large number of heteroplasmic variants could create excessive run-times during haplotype identification
+
 # v0.2.5
 ## Fixed
 - Fixed an issue where overlapping deletions would lead to elevated partial fingerprinting in the debug outputs
