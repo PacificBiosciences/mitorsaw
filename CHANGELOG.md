@@ -1,3 +1,7 @@
+# v0.2.7
+## Fixed
+- Fixed an issue where large deletions near the end of the reference chrM may be excluded from reporting
+
 # v0.2.6
 ## Fixed
 - Fixed an issue where overlapping variants were not properly marked as incompatible, generating nonsense consensus sequences
