@@ -3,6 +3,7 @@ Table of contents:
 
 * [Quickstart](#quickstart)
 * [Supported upstream processes](#supported-upstream-processes)
+* [Additional options](#additional-options)
 * [Output files](#output-files)
 * [FAQ](#faq)
 
@@ -71,6 +72,15 @@ mitorsaw haplotype \
 Mitorsaw is currently single-threaded.
 The most memory intensive part of the process is remapping to the reference genome to search for NUMTs.
 In our experience, this step has used up to 20 GB of memory in some datasets.
+
+# Additional options
+Mitorsaw sets default options that are broadly useful for research applications. 
+However, the following options are commonly tuned depending on the downstream application:
+
+* `--minimum-read-count` - Minimum read count to consider a heteroplasmic variant [default: 3]. Increasing this value can help restrict variant calls to those with higher coverage, potentially removing false positives. We do not recommend lowering this parameter.
+* `--minimum-maf` - Minimum allele frequency to consider a heteroplasmic variant [default: 0.10]. Lowering this value may lead to higher recall of heteroplasmic variants at low allele frequency, at the cost of higher false positive rates from sequencing errors.
+
+For a full set of parameters, run mitorsaw with the `--help` option.
 
 # Supported upstream processes
 The following upstream processes are supported as inputs to Mitorsaw:
