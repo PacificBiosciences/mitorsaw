@@ -1,3 +1,7 @@
+# v0.2.8
+## Changes
+- Relaxed `--minimum-maf` lower bound from 0.01 to 0.0, allowing the MAF filter to be more sensitive or effectively disabled
+
 # v0.2.7
 ## Fixed
 - Fixed an issue where large deletions near the end of the reference chrM may be excluded from reporting
