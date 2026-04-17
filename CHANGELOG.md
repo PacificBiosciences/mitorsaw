@@ -1,3 +1,7 @@
+# v0.2.9
+## Changes
+- Added `--disable-hp-filter` to the haplotype subcommand to allow heteroplasmic homopolymer expansion/contraction variants
+
 # v0.2.8
 ## Changes
 - Relaxed `--minimum-maf` lower bound from 0.01 to 0.0, allowing the MAF filter to be more sensitive or effectively disabled
