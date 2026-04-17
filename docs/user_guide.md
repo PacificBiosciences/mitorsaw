@@ -46,6 +46,7 @@ mitorsaw haplotype \
 [2025-02-07T14:41:34.421Z INFO  mitorsaw::cli::haplotype] 	Minimum read count: 3
 [2025-02-07T14:41:34.421Z INFO  mitorsaw::cli::haplotype] 	Minimum MAF: 0.1
 [2025-02-07T14:41:34.421Z INFO  mitorsaw::cli::haplotype] 	Minimum mapping fraction: 0.9
+[2025-02-07T14:41:34.421Z INFO  mitorsaw::cli::haplotype] 	Homopolymer filter: ENABLED
 [2025-02-07T14:41:34.421Z INFO  mitorsaw] Creating debug folder at "./test_mito_debug"...
 [2025-02-07T14:41:34.427Z INFO  mitorsaw] Parsing chrM records from 1 BAM files...
 [2025-02-07T14:41:34.427Z INFO  mitorsaw::read_parsing] 	Loading ./HG001.GRCh38.haplotagged.bam...
@@ -79,6 +80,7 @@ However, the following options are commonly tuned depending on the downstream ap
 
 * `--minimum-read-count` - Minimum read count to consider a heteroplasmic variant [default: 3]. Increasing this value can help restrict variant calls to those with higher coverage, potentially removing false positives. We do not recommend lowering this parameter.
 * `--minimum-maf` - Minimum allele frequency to consider a heteroplasmic variant [default: 0.10]. Lowering this value may lead to higher recall of heteroplasmic variants at low allele frequency, at the cost of higher false positive rates from sequencing errors.
+* `--disable-hp-filter` - Disables filtering of putative homopolymer expansion/contraction variants (default: filter enabled). Use when you want those sites retained in downstream haplotyping despite higher false-positive risk in homopolymer contexts.
 
 For a full set of parameters, run mitorsaw with the `--help` option.
 
