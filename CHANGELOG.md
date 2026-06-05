@@ -1,3 +1,7 @@
+# v0.2.10
+## Fixed
+- Fixed an issue where deletion events spanning the 0 position of the reference chrM would cause a panic. These are now reported as two separate events in the output VCF file: one at the end of chrM and one at the start.
+
 # v0.2.9
 ## Changes
 - Added `--disable-hp-filter` to the haplotype subcommand to allow heteroplasmic homopolymer expansion/contraction variants
