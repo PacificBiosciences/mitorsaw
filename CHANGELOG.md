@@ -1,3 +1,8 @@
+# v0.2.11
+## Fixed
+- Improved the error message for when the reference FASTA index (.fai) is missing
+- Mitorsaw will now skip any reads missing a sequence with a warning instead of erroring
+
 # v0.2.10
 ## Fixed
 - Fixed an issue where deletion events spanning the 0 position of the reference chrM would cause a panic. These are now reported as two separate events in the output VCF file: one at the end of chrM and one at the start.
