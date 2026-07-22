@@ -17,7 +17,7 @@ mitorsaw haplotype \
 ```
 
 Parameters:
-* `--reference {REFERENCE}` - a FASTA file containing the reference genome, which must be GRCh38 and contain chrM
+* `--reference {REFERENCE}` - a FASTA file containing the reference genome, which must contain a "chrM" contig
 * `--bam {IN_BAM}` - path to a BAM file containing reads from a single sample, this option can be specified multiple times; each BAM file must be indexed prior to running Mitorsaw
 * `--output-vcf {OUT_VCF}` - path to the output VCF that will contain the identified mitochondrial variants
 * `--output-hap-stats {OUT_STATS}` - path to an output stats file (.json) that contains useful metrics regarding the haplotypes that were identified
@@ -85,13 +85,17 @@ However, the following options are commonly tuned depending on the downstream ap
 For a full set of parameters, run mitorsaw with the `--help` option.
 
 # Supported upstream processes
+Mitorsaw requires an aligned BAM file as input.
 The following upstream processes are supported as inputs to Mitorsaw:
 
+* Reference genomes:
+  * GRCh38 - human "hg38" reference genome
 * Aligners (BAM files):
   * [pbmm2](https://github.com/PacificBiosciences/pbmm2) (recommended)
   * [minimap2](https://github.com/lh3/minimap2)
 
 Other upstream processes may work with Mitorsaw, but there is no official support for them at this time.
+If you wish to use an alternate reference genome (human or non-human), the only hard requirement is that a "chrM" contig is present within the reference genome.
 
 # Output files
 ## Phased mitochondrial VCF
