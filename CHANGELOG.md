@@ -1,3 +1,10 @@
+# v0.2.12
+## Changes
+- Reads that fail remapping to the consensus or reference are now skipped with a warning instead of generating an error
+
+## Fixed
+- Fixed debug IGV BAM writing for reads with missing QUAL values
+
 # v0.2.11
 ## Fixed
 - Improved the error message for when the reference FASTA index (.fai) is missing
