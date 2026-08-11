@@ -1,3 +1,11 @@
+# v0.2.13
+## Changes
+- Added a new option `--downsample` that enables downsampling of reads from the input BAM files
+
+## Fixed
+- Fixed an issue where invalid read mappings were not filtered during putative variant identification
+- Added a warning when a BAM/CRAM index (.bai/.crai) is missing or older than the alignment file
+
 # v0.2.12
 ## Changes
 - Reads that fail remapping to the consensus or reference are now skipped with a warning instead of generating an error
