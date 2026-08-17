@@ -1,3 +1,7 @@
+# v0.2.14
+## Fixed
+- Fixed an where consensus loops could create erroneous variant calls when variants are very near to 50% AF
+
 # v0.2.13
 ## Changes
 - Added a new option `--downsample` that enables downsampling of reads from the input BAM files
